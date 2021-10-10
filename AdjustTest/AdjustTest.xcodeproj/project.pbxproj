@@ -17,6 +17,7 @@
 		D0DB2BB62712FD3900053668 /* AdjustTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DB2BB52712FD3900053668 /* AdjustTestTests.m */; };
 		D0DB2BC12712FD3900053668 /* AdjustTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DB2BC02712FD3900053668 /* AdjustTestUITests.m */; };
 		D0DB2BD02713089800053668 /* NetworkOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DB2BCF2713089800053668 /* NetworkOperation.m */; };
+		D0DB2BD627135E1800053668 /* PreferenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DB2BD527135E1800053668 /* PreferenceManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		D0DB2BC22712FD3900053668 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0DB2BCE2713089800053668 /* NetworkOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkOperation.h; sourceTree = "<group>"; };
 		D0DB2BCF2713089800053668 /* NetworkOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkOperation.m; sourceTree = "<group>"; };
+		D0DB2BD427135E1800053668 /* PreferenceManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreferenceManager.h; sourceTree = "<group>"; };
+		D0DB2BD527135E1800053668 /* PreferenceManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreferenceManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,19 +110,17 @@
 		D0DB2B982712FD3700053668 /* AdjustTest */ = {
 			isa = PBXGroup;
 			children = (
+				D0DB2BD327135DB600053668 /* View Controller */,
+				D0DB2BD127135D8900053668 /* Utils */,
 				D0DB2B992712FD3700053668 /* AppDelegate.h */,
 				D0DB2B9A2712FD3700053668 /* AppDelegate.m */,
 				D0DB2B9C2712FD3700053668 /* SceneDelegate.h */,
 				D0DB2B9D2712FD3700053668 /* SceneDelegate.m */,
-				D0DB2B9F2712FD3700053668 /* ViewController.h */,
-				D0DB2BA02712FD3700053668 /* ViewController.m */,
 				D0DB2BA22712FD3700053668 /* Main.storyboard */,
 				D0DB2BA52712FD3900053668 /* Assets.xcassets */,
 				D0DB2BA72712FD3900053668 /* LaunchScreen.storyboard */,
 				D0DB2BAA2712FD3900053668 /* Info.plist */,
 				D0DB2BAB2712FD3900053668 /* main.m */,
-				D0DB2BCE2713089800053668 /* NetworkOperation.h */,
-				D0DB2BCF2713089800053668 /* NetworkOperation.m */,
 			);
 			path = AdjustTest;
 			sourceTree = "<group>";
@@ -140,6 +141,26 @@
 				D0DB2BC22712FD3900053668 /* Info.plist */,
 			);
 			path = AdjustTestUITests;
+			sourceTree = "<group>";
+		};
+		D0DB2BD127135D8900053668 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D0DB2BCE2713089800053668 /* NetworkOperation.h */,
+				D0DB2BCF2713089800053668 /* NetworkOperation.m */,
+				D0DB2BD427135E1800053668 /* PreferenceManager.h */,
+				D0DB2BD527135E1800053668 /* PreferenceManager.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D0DB2BD327135DB600053668 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D0DB2B9F2712FD3700053668 /* ViewController.h */,
+				D0DB2BA02712FD3700053668 /* ViewController.m */,
+			);
+			path = "View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +296,7 @@
 				D0DB2BD02713089800053668 /* NetworkOperation.m in Sources */,
 				D0DB2B9B2712FD3700053668 /* AppDelegate.m in Sources */,
 				D0DB2BAC2712FD3900053668 /* main.m in Sources */,
+				D0DB2BD627135E1800053668 /* PreferenceManager.m in Sources */,
 				D0DB2B9E2712FD3700053668 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
