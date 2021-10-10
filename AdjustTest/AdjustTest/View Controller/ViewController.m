@@ -67,12 +67,10 @@ PreferenceManager *preference;
         dispatch_async(dispatch_get_main_queue(), ^{
             NSString *resId = [res valueForKey:@"id"];
             NSString *seconds = [res valueForKey:@"seconds"];
+            [self->unsentSeconds removeObject:seconds];
             if (isSuccess && resId != nil && seconds != nil) {
                 NSLog(@"id = %@ \t seconds = %@", resId, seconds);
-                [self->unsentSeconds removeObject:seconds];
                 [self->sentSeconds addObject:seconds];
-            } else {
-                [self->unsentSeconds removeObject:seconds];
             }
         });
     }];

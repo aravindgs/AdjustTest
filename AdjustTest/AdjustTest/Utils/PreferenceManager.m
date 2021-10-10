@@ -24,11 +24,7 @@ static NSString *sentSecondsKey = @"sentSeconds";
 }
 
 - (void)saveUnsentSecondsArray : (NSArray <NSString *> *) secondsArray {
-    NSMutableArray <NSString *> *unsentSeconds = [NSMutableArray arrayWithArray:[self getUnsentSecondsArray]];
-    NSMutableSet *mergedSet = [NSMutableSet setWithArray:unsentSeconds];
-    [mergedSet unionSet:[NSSet setWithArray:secondsArray]];
-    NSArray *unsentArray = [mergedSet allObjects];
-    [prefs setObject:unsentArray forKey:unsentSecondsKey];
+    [prefs setObject:secondsArray forKey:unsentSecondsKey];
     [prefs synchronize];
 }
 
