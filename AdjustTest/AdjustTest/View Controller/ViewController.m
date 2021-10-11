@@ -7,24 +7,13 @@
 
 #import "ViewController.h"
 #import "NetworkOperation.h"
-#import "PreferenceManager.h"
-
-@interface ViewController ()
-
-@property (nonatomic, strong) NSMutableArray<NSString *> *sentSeconds;
-@property (nonatomic, strong) NSMutableArray <NSString *> *unsentSeconds;
-@property (nonatomic, strong) NSOperationQueue *networkQ;
-
-
-@end
 
 @implementation ViewController
-
-PreferenceManager *preference;
 
 @synthesize sentSeconds;
 @synthesize unsentSeconds;
 @synthesize networkQ;
+@synthesize preference;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
