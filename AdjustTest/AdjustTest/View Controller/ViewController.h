@@ -15,6 +15,8 @@
 @property (nonatomic, strong) NSOperationQueue *networkQ;
 @property (nonatomic, strong) PreferenceManager *preference;
 
+- (IBAction)captureSecond;
+
 - (void) sendSecondToServer:(NSString *)second;
 
 - (void) setupOperationQueue;

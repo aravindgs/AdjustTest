@@ -56,4 +56,33 @@
     XCTAssert([finalUnsent isEqualToArray:@[]]);
 }
 
+- (void)testSendSecondToServer {
+    [vc setupOperationQueue];
+    [vc sendSecondToServer:@"23"];
+    XCTestExpectation *expectation = [[XCTestExpectation alloc] initWithDescription:@"Test after 5 seconds"];
+    XCTWaiterResult result = [XCTWaiter waitForExpectations:@[expectation] timeout:5.0];
+    if (result == XCTWaiterResultTimedOut) {
+        XCTAssert([vc.sentSeconds containsObject:@"23"]);
+    } else {
+        XCTFail(@"Failed");
+    }
+    
+}
+
+- (void)testCaptureSecond {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"ss"];
+    [vc setupOperationQueue];
+    NSString *currentSeconds = [dateFormatter stringFromDate:[NSDate date]];
+    [vc captureSecond];
+    XCTestExpectation *expectation = [[XCTestExpectation alloc] initWithDescription:@"Test after 5 seconds"];
+    XCTWaiterResult result = [XCTWaiter waitForExpectations:@[expectation] timeout:5.0];
+    if (result == XCTWaiterResultTimedOut) {
+        XCTAssert([vc.sentSeconds containsObject:currentSeconds]);
+    } else {
+        XCTFail(@"Failed");
+    }
+    
+}
+
 @end
